@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>百洋健康-登录</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+    <script type="text/javascript" src="../js/common.js"></script>
+
+</head>
+<body>
+    <div id="login">
+        
+            <div id="top">
+                   <div class="container">
+                       <a href=""><img src="../img/login_by.png" alt="百洋健康" /></a> 
+                            <div class="top_layout">  
+                                <ul>
+                                    <img src="../img/login_xby.png" />
+                                    <li>您好,欢迎来到百洋健康</li>
+                                    <li>已注册的会员请登录,或立即&nbsp;<a href="">注册新会员11</a></li>
+                                </ul>
+                            </div>   
+                    
+                    </div>   
+            </div>
+  
+            <div id="main">
+                <div class="container">
+                    <div class="pic">
+                        <img src="../img/login_bac.jpg"  />
+                    </div>
+                    <div class="login_layout">
+                        <div id="user_login" class="active"><a href="">用户登录</a></div>
+                        <div id="mobile_login"><a href="">手机动态码登录</a></div>
+                    
+                    <form action="" method="post" onsubmit="return yz(document.getElementByIdx_x('pwd'));">
+                        <dl class="user_login_layout">
+                            <dd>帐&nbsp;&nbsp;号:<input type="text" name="" id="account" placeholder="可使用已注册的用户名或手机号登录" /></dd>
+                            <dd>密&nbsp;&nbsp;码:<input type="password" name="" id="upwd"  placeholder="6-20个大小写英文字母,符号或数字"/></dd>
+                            <dd>验证码:<input type="text" name="" id="pwd"  placeholder="输入验证码"/></dd>
+                            <div id="code">yzm</div>
+                            
+                            <dd><input type="radio" name="" id="" /><span>七天自动登录</span> <a href="">忘记密码?</a></dd>
+                            <dd><input type="submit" value="登录" /></dd>
+                        </dl>  
+
+
+                        <dl class="" style="display:none;">
+                            <form action="">
+                                <dt><span>手机注册</span></dt>
+                                <dd class="nth1" >手机号:<input type="text" name="" id="account" placeholder="请输入手机号码" /></dd>
+                                <dd class="nth2">验证码:<input type="text" name="" id="pwd"  placeholder="输入验证码"/></dd>
+
+                                <div id="code"></div>
+                                <dd class="nth3"><span>确保上方验证码输入正确,点击
+                                <a href=""><i></i>发送短信验证</a>,并将您手机短信所接受到的"6位动态码输入到下方短信验证,再提交下一步."</span></dd>
+                                <dd class="nth4">短信验证:<input type="password" name="" id="pwd"  placeholder="输入6位短信验证码"/></dd>
+                            </form>                
+                                <dd class="nth5"><input type="submit" value="下一步" id="btnLogin" /></dd>
+                         
+                    </dl>  
+                           
+                </div>
+                   
+                </div>
+            </div>   
+            <div id="bottom">
+              <a href=""><span style="border-right:1px solid#ccc;">首页</span></a>
+              <a href=""><span>联系我们</span></a><br />
+              <span>版权所有 &#169; 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 鲁ICP备09091598号</span>
+            </div> 
+    </div>
+
+       <script>
+    /*
+        编写生成4位数字验证码的函数，并显示在页面，点击重新生成验证码
+     */
+  
+        var code = document.getElementById('code');
+        var btnLogin = document.getElementById('btnLogin');
+       var pwd = document.getElementById('pwd');
+       var _pwd = pwd.value;
+        function createCode(){
+           code.innerHTML = randomNumber(1000,9999);
+        }
+
+        createCode();
+        // 登录验证
+        function yz(obj){
+            // 获取输入的验证码
+            if(_pwd.value != pwd.innerHTML){
+                alert('验证码不正确')
+            }else{
+                location.href = '../html/success.html';
+            }
+        }
+
+
+        // 点击刷新
+        code.onclick = function(){
+            createCode();
+        }
+    </script>
+</body>
+</html>

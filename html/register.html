@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>百洋健康--注册</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/register.css" />
+    <script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+    <div id="login">
+        
+        <div id="top">
+                <div class="container">
+                   <img src="../img/login_by.png" alt="百洋健康" />
+                        <div class="top_layout">  
+                        <span>我已经注册,现在就<a href="">登录</a></span>
+                        </div>
+                </div>   
+        </div>
+  
+        <div id="main"> 
+            <div class="pic">
+                <div id="register_layout">
+                    <div class="left">
+                            <form action="">
+                                <dl>
+                                    <dt><span>手机注册</span></dt>
+                                    <dd class="nth1" >手机号:<input type="text" name="" id="account" placeholder="请输入手机号码" /></dd>
+                                    <dd class="nth2">验证码:<input type="text" name="" id="pwd"  placeholder="输入验证码"/></dd>
+
+                                    <div id="code"></div>
+                                    <dd class="nth3"><span>确保上方验证码输入正确,点击
+                                    <a href=""><i></i>发送短信验证</a>,并将您手机短信所接受到的"6位动态码输入到下方短信验证,再提交下一步."</span></dd>
+                                    <dd class="nth4">短信验证:<input type="password" name="" id="pwd"  placeholder="输入6位短信验证码"/></dd>
+                            </form>                
+                                    <dd class="nth5"><input type="submit" value="下一步" id="btnLogin" /></dd>
+                             
+                                </dl>  
+                           
+                    </div>
+                    <div class="right">
+                                <dl>
+                                    <dt>注册之后您可以</dt>
+                                    <dd>购买商品支付订单</dd>
+                                    <dd>收藏商品关注店铺</dd>
+                                    <dd>安全交易诚信无忧</dd>
+                                    <dd>积分获取优惠购物</dd>
+                                    <dd>会员等级享受特权</dd>
+                                    <dd>评价晒单站外分享</dd>
+                                </dl>
+                    </div>
+                </div>
+            </div>    
+        </div>     
+
+        <div id="bottom">
+              <a href=""><span style="border-right:1px solid#ccc;">首页</span></a>
+              <a href=""><span>联系我们</span></a><br />
+              <span>版权所有 &#169; 2007-2018 青岛百洋健康药房连锁有限公司 百洋健康 鲁ICP备09091598号</span>
+        </div> 
+
+    </div>
+
+    <script>
+    /*
+        编写生成4位数字验证码的函数，并显示在页面，点击重新生成验证码
+     */
+        var pwd = document.getElementById('pwd');
+        var code = document.getElementById('code');
+        var btnLogin = document.getElementById('btnLogin');
+
+        function createCode(){
+           code.innerHTML = randomNumber(1000,9999);
+        }
+
+        createCode();
+        // 登录验证
+        btnLogin.onclick = function(){
+            // 获取输入的验证码
+            var _pwd = pwd.value;
+
+            if(_pwd != code.innerHTML){
+                alert('验证码不正确')
+            }else{
+                location.href = '../html/success.html';
+            }
+        }
+
+        // 点击刷新
+        code.onclick = function(){
+            createCode();
+        }
+    </script>
+
+</body>
+</html>

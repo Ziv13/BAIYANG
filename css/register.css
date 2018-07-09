@@ -1,0 +1,31 @@
+#login{width: 100%;}
+#top{width: 100%; height: 84px;border-bottom: 1px solid#ccc;}
+.container{width: 988px;margin:0 auto;}
+#top .top_layout{float:right;padding-top: 50px;width: 314px;} 
+#top .top_layout span{font-size: 14px;line-height: 24px;}
+#top .top_layout  a{color:#E81D75;}
+
+#main{width: 100%;height: 700px;}
+#main .pic{background:url("../img/register_bg.png");width: 100%;height: 680px;}
+#main .pic #register_layout{width: 858px;height: 558px;margin:58px 0 0 268px;border:12px solid#ccc;background:#fff;}
+#main .pic #register_layout .left{margin:16px 20px; width: 580px;height: 526px;
+    border-right:1px solid#ccc;position:relative;display:inline-block;}
+#main .pic #register_layout .left dl dt{width: 580px;height: 44px;border-bottom:1px solid#ccc;}
+#main .pic #register_layout .left dl dt span{display:block;margin-left:140px;width: 292px;height: 44px;text-align: center;font-size: 16px;line-height: 44px;color:#EF3C79;}
+#main .pic #register_layout .left dl dd {margin-left: 98px;width: 400px;height: 52px;border:1px solid#ccc;font-size: 14px;line-height: 52px;padding-left: 22px;}
+#main .pic #register_layout .left dl dd input{display:inline-block;padding-left: 22px;width: 200px;height: 28px;}
+#main .pic #register_layout .left dl .nth1{margin-top: 50px;}
+#main .pic #register_layout .left dl .nth2{width: 278px;}
+#main .pic #register_layout .left #code{width: 122px;height: 52px;border:1px solid#ccc;position:absolute;top:148px;right:58px;}
+#main .pic #register_layout .left dl .nth3{border:0 none;font-size: 14px;line-height: 24px;}
+#main .pic #register_layout .left dl .nth4{margin-bottom: 16px;}
+#main .pic #register_layout .left dl .nth5{height: 42px;background:#EF3C79;padding-right: 22px;}
+#main .pic #register_layout .left dl .nth5 input{text-align: center;width: 380px;height: 30px;
+    background:#EF3C79;line-height: 30px;}
+
+#main .pic #register_layout .right{ width: 208px;height: 526px;display:inline-block;position:relative;top:-108px;}
+#main .pic #register_layout .right dl{margin-top: 22px;}
+#main .pic #register_layout .right dd{padding-left: 16px;margin-top: 14px;}
+#bottom {width: 100% ;height: 100px;text-align: center;margin-top: 60px;}
+#bottom span{padding:0 10px;}
+#bottom a:hover{color:#E81D75;}
